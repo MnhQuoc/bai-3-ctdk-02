@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<h1 style="color:brown;">Tính diện tích hình vuông</h1>
+<body>
+<br> Nhập độ dài cạnh hình vuông <input type="number" id="canh" placeholder="đơn vị cm" > </br>
+<br>
+<button style="width:130px; height:30px" onclick="tinhdientich()"> Tính diện tích </button>
+<p id="dientich"> Diện tích hình vuông: </p>
+
+</body>
+<script>
+    function tinhdientich() {
+        let canh = +document.getElementById("canh").value
+        let dientich = canh**2;
+        if (canh<=0){
+            document.getElementById("dientich").innerHTML = "Cạnh của hình vuông không thể nhỏ hơn hoặc bằng 0" ;
+        } else {
+            document.getElementById("dientich").innerHTML = "Diện tích hình vuông có cạnh " + canh + " là: " + dientich ;
+        }
+    }
+</script>
+</html>
